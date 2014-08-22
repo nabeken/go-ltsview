@@ -5,7 +5,7 @@ A ltsview written in Go.
 # Installation
 
 ```sh
-$ go get https://github.com/nabeken/go-ltsview/ltsview
+$ go get -u github.com/nabeken/go-ltsview/ltsview
 ```
 
 # Usage
