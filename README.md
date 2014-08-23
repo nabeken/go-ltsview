@@ -15,6 +15,7 @@ $ ltsview --help
 Usage of ltsview:
   -i="": Specify comma-separated keys to ignore
   -k="": Specify comma-separated keys to show
+  -n=false: Set to true to disable colorize outputs
 ```
 
 # Examples
