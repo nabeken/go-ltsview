@@ -22,6 +22,8 @@ Usage of ltsview:
 
 ![demo](http://nabeken.github.io/go-ltsview/images/go-ltsview-demo.gif)
 
+(This demo is brought to you by [ttygif](https://github.com/sugyan/ttygif).)
+
 # Inspired by
 
 - https://github.com/naoya/perl-Text-LTSV
