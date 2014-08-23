@@ -7,8 +7,8 @@ import (
 	"github.com/nabeken/go-ltsview"
 )
 
-var flagKeys = flag.String("k", "", "Specify comma-sparated keys to show")
-var flagIkeys = flag.String("i", "", "Specify comma-spareted keys to ignore")
+var flagKeys = flag.String("k", "", "Specify comma-separated keys to show")
+var flagIkeys = flag.String("i", "", "Specify comma-separated keys to ignore")
 
 func main() {
 	flag.Parse()

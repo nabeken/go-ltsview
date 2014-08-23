@@ -13,8 +13,8 @@ $ go get -u github.com/nabeken/go-ltsview/ltsview
 ```sh
 $ ltsview --help
 Usage of ltsview:
-  -i="": Specify comma-spareted keys to ignore
-  -k="": Specify comma-sparated keys to show
+  -i="": Specify comma-separated keys to ignore
+  -k="": Specify comma-separated keys to show
 ```
 
 # Examples
