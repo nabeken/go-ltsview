@@ -22,8 +22,11 @@ func (v *LTSView) Start() {
 	reader := goltsv.NewReader(v.Reader)
 	for {
 		record, err := reader.Read()
-		if err != nil {
+		if err == io.EOF {
 			break
+		}
+		if err != nil {
+			continue
 		}
 		PrintSep(v.Writer)
 		sortedKeys := SortKeys(record)
