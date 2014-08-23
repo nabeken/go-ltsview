@@ -37,7 +37,7 @@ ua: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
 
 	actual := &bytes.Buffer{}
 	DoTestLTSView(t, func(v *LTSView) {
-		v.Writer = actual
+		v.Writer = NewWriter(actual)
 		v.Start()
 	})
 	assert.Equal(t, expected, actual.String())
@@ -54,7 +54,7 @@ status: 302
 
 	actual := &bytes.Buffer{}
 	DoTestLTSView(t, func(v *LTSView) {
-		v.Writer = actual
+		v.Writer = NewWriter(actual)
 		v.Keys = ParseKeysByFlag("host,status")
 		v.Start()
 	})
@@ -74,7 +74,7 @@ status: 302
 
 	actual := &bytes.Buffer{}
 	DoTestLTSView(t, func(v *LTSView) {
-		v.Writer = actual
+		v.Writer = NewWriter(actual)
 		v.Ikeys = ParseKeysByFlag("ua,time")
 		v.Start()
 	})
