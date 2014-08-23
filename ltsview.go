@@ -6,6 +6,7 @@ import (
 	"sort"
 	"strings"
 
+	"github.com/fatih/color"
 	"github.com/ymotongpoo/goltsv"
 )
 
@@ -53,6 +54,24 @@ func PrintLine(w io.Writer, k, v string) {
 
 func PrintSep(w io.Writer) {
 	fmt.Fprintln(w, "---")
+}
+
+type ColorableWriter struct {
+	io.Writer
+}
+
+func (w *ColorableWriter) Write(p []byte) (int, error) {
+	f := color.New(color.FgMagenta).SprintFunc()
+	for i := range p {
+		str := string(p[i])
+		if p[i] == ':' {
+			fmt.Fprint(w.Writer, str)
+			f = color.New(color.FgGreen).SprintFunc()
+			continue
+		}
+		fmt.Fprint(w.Writer, f(str))
+	}
+	return len(p), nil
 }
 
 func ParseKeysByFlag(flag string) map[string]struct{} {
