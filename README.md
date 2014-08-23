@@ -1,6 +1,6 @@
 # go-ltsview [![build status](https://travis-ci.org/nabeken/go-ltsview.svg?branch=master)](https://travis-ci.org/nabeken/go-ltsview)
 
-A ltsview written in Go.
+A [LTSV](http://ltsv.org) viewer written in Go.
 
 # Installation
 
