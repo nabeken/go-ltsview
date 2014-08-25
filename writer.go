@@ -38,10 +38,12 @@ func (w *ColorableWriter) WriteSeparator(sep string) (int, error) {
 
 func (w *ColorableWriter) Write(p []byte) (int, error) {
 	f := color.New(color.FgMagenta).SprintFunc()
+	keyPrinted := false
 	for i := range p {
 		str := string(p[i])
-		if p[i] == ':' {
+		if !keyPrinted && p[i] == ':' {
 			fmt.Fprint(w.Writer, str)
+			keyPrinted = true
 			f = color.New(color.FgGreen).SprintFunc()
 			continue
 		}
