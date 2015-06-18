@@ -26,4 +26,5 @@ deploy:
     - snapshot/ltsview_linux_amd64.tar.gz
     - snapshot/ltsview_windows_386.zip
   on:
+    tags: true
     repo: nabeken/go-ltsview
